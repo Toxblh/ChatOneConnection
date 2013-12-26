@@ -11,10 +11,6 @@ import java.net.Socket;
 public class Server {
     private static final int port = 8888;
 
-    private void addClient (){
-
-    }
-
     public static void main(String[] args) {
         try {
             ServerSocket ss = new ServerSocket(port);
