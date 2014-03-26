@@ -13,6 +13,7 @@ public class Server {
 
     public static void main(String[] args) {
         try {
+            
             ServerSocket ss = new ServerSocket(port);
             System.out.println("Wait client..");
             Socket socket = ss.accept();
@@ -27,15 +28,22 @@ public class Server {
 
             String line = null;
             while (true) {
+        
                 line = in.readUTF();
                 System.out.println("Client send: " + line);
                 out.writeUTF(line);
                 out.flush();
+                
                 System.out.println("Wait next..");
                 System.out.println();
+                
             }
-        } catch (Exception x) {
+        }
+        
+        catch (Exception x) {
+        
             x.printStackTrace();
+        
         }
     }
 }
